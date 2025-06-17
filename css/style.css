@@ -1,0 +1,303 @@
+/******************
+*   Brian Burns   *
+*    style.css    *
+* brianburns.dev  *
+******************/
+
+/* General Settings */
+
+@font-face {
+  font-family: Domine;
+  src: url(../webfonts/Domine-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: Lato;
+  src: url(../webfonts/Lato-Regular.ttf);
+}
+
+body {
+  font-family: Lato, Helvetica, Arial, sans-serif;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+}
+
+.container {
+  background-color: #1d1d1d;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.frontText {
+  color: white;
+  font-family: Domine, Lato, Helvetica, Arial, sans-serif;
+  font-size: 2em;
+  transition: 0.5s;
+}
+
+.frontText:hover {
+  color: #87ceeb;
+}
+
+*::selection {
+  background-color: white;
+  color: #1d1d1d;
+}
+
+*::-moz-selection {
+  background-color: white;
+  color: #1d1d1d;
+}
+
+/* Social Buttons */
+.social-buttons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-btn {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.social-btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.linkedin {
+  background: linear-gradient(135deg, #0077b5, #005885);
+}
+
+.linkedin:hover {
+  background: linear-gradient(135deg, #005885, #004066);
+  border-color: #0077b5;
+}
+
+.github {
+  background: linear-gradient(135deg, #333, #24292e);
+}
+
+.github:hover {
+  background: linear-gradient(135deg, #24292e, #1a1e22);
+  border-color: #666;
+}
+
+.resume {
+  background: linear-gradient(135deg, #87ceeb, #5a9fd4);
+}
+
+.resume:hover {
+  background: linear-gradient(135deg, #5a9fd4, #4682b4);
+  border-color: #87ceeb;
+}
+
+/* Resume Styles */
+.resume-container {
+  background-color: #1d1d1d;
+  min-height: 100vh;
+  padding: 2rem;
+  color: white;
+}
+
+.resume-content {
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: Lato, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.resume-header {
+  text-align: left;
+  margin-bottom: 0.5rem;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.resume-name {
+  font-family: Domine, Lato, Helvetica, Arial, sans-serif;
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 0 0 1rem 0;
+  transition: 0.5s;
+  flex: 1;
+}
+
+.resume-name:hover {
+  color: #87ceeb;
+}
+
+.pdf-download-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  font-size: 1.3rem;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  background: linear-gradient(135deg, #dc3545, #b02a37);
+  flex-shrink: 0;
+}
+
+.pdf-download-btn:hover {
+  background: linear-gradient(135deg, #b02a37, #8b1e2b);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(220, 53, 69, 0.3);
+  border-color: #dc3545;
+}
+
+.resume-section {
+  margin-bottom: 3rem;
+}
+
+.section-title {
+  font-family: Domine, Lato, Helvetica, Arial, sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0 0 1.5rem 0;
+  border-bottom: 1px solid #444;
+  padding-bottom: 0.5rem;
+  transition: 0.5s;
+}
+
+.section-title:hover {
+  color: #87ceeb;
+}
+
+.job, .education {
+  margin-bottom: 2rem;
+}
+
+.job-header, .education-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.job-left, .education-left {
+  flex: 1;
+}
+
+.job-right, .education-right {
+  flex-shrink: 0;
+  text-align: right;
+}
+
+.company, .school {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin: 0 0 0.3rem 0;
+  color: white;
+}
+
+.job-title, .degree {
+  font-style: italic;
+  margin: 0;
+  color: #ccc;
+  font-size: 1.1rem;
+}
+
+.job-dates, .education-dates {
+  color: #ccc;
+  font-family: monospace;
+  font-weight: bold;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.job-bullets, .education-details {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+}
+
+.job-bullets li, .education-details li {
+  margin-bottom: 0.5rem;
+  color: white;
+}
+
+/* Responsive Design for Resume */
+@media only screen and (max-width: 768px) {
+  .resume-container {
+    padding: 1rem;
+  }
+  
+  .header-top {
+    gap: 1rem;
+  }
+  
+  .resume-name {
+    font-size: 2.2rem;
+  }
+  
+  .pdf-download-btn {
+    width: 45px;
+    height: 45px;
+    font-size: 1.1rem;
+  }
+  
+  .job-header, .education-header {
+    flex-direction: column;
+  }
+  
+  .job-right, .education-right {
+    text-align: left;
+    margin-top: 0.5rem;
+  }
+  
+  .section-title {
+    font-size: 1.6rem;
+  }
+  
+  .company, .school {
+    font-size: 1.1rem;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .frontText {
+    font-size: 5em;
+  }
+  
+  .social-buttons {
+    gap: 1rem;
+  }
+  
+  .social-btn {
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
+  }
+}
